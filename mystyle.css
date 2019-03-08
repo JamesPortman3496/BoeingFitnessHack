@@ -1,27 +1,38 @@
 body {
-    	background-color: #E2E2E2;
-	text-align:center;
+  background-color: white;
+  text-align:center;
 }
 
 h1 {
-    	color: black;
- 	text-align:center;
-	font-family:Courier;
-	font-size:300%;
+  color: black;
+  text-align:center;
+  font-family:Courier;
+  font-size:300%;
 	
 }
 img {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-	width: 40%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40%;
 }
 
 
-* {box-sizing:border-box}
-body{font-family:Verdana, sans-serif; margin:0}
-.mySlides{display: none}
-img{vertical-align:middle;}
+* {
+  box-sizing:border-box
+}
+
+body{
+  font-family:Verdana, sans-serif; margin:0
+}
+
+.mySlides{
+  display: none
+}
+
+img{
+  vertical-align:middle;
+}
 
 /* Slideshow container */
 .slideshow-container {
