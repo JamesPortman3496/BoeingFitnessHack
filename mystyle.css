@@ -119,7 +119,7 @@ img{
   to {opacity: 1}
 }
 */
-
+/*
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 
@@ -132,7 +132,6 @@ img{
 
 
 
-/*---Media Queries --*/
 @media (max-width: 992px) {
 
 }
@@ -144,7 +143,6 @@ img{
 }
 
 
-/*---Firefox Bug Fix --*/
 .carousel-item {
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
@@ -152,8 +150,7 @@ img{
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
 }
-/*--- Fixed Background Image --*/
-figure {
+]figure {
   position: relative;
   width: 100%;
   height: 60%;
@@ -181,11 +178,10 @@ figure {
   transform: translateZ(0);
   will-change: transform;
 }
-/*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
   padding: 1rem;
 }
-
+*/
 
 
 
