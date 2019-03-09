@@ -55,10 +55,6 @@
 		background-color: #f6f6f6;
 	}
 
-	.bg-blue{
-		background-color: #42a3f7;
-	}
-
 	.container-fluid {
 		padding: 60px 50px;
 	}
@@ -271,8 +267,7 @@
 	<div id="plan" class="container-fluid text-center">
 		<h2>PLAN</h2>
 		<h4>Fill in your details to generate a bespoke fitness place</h4>
-		<br>
-		<div class="row">
+		<div id="details" class="row">
 			<div class="col-sm-4">
 				<h4>CURRENT</h4>
 				<p>Fill in details about you and your current body</p>
@@ -305,7 +300,6 @@
 					</select>
 					</h5>
 				</div>
-
 			</div>
 			<div class="col-sm-4">
 				<h4>RESOURCES</h4>
@@ -368,14 +362,21 @@
 				</div>
 			</div>
 		</div>
-		<br>
-		<br>
 
-		<a href="javascript:;" onClick="openPlan()">Generate Your Plan</a>
-		<div id="planContent" style="display:none;" class="bg-blue">
+
+		<a id="tag" href="javascript:;" onClick="openPlan()">Generate Your Plan</a>
+		<div id="planContent" style="display:none;">
 			<div class="row">
 				<div class="col-sm-4">
 					<h4>DAY</h4>
+					<h4>MONDAY</h4>
+					<h4>TUESDAY</h4>
+					<h4>WEDNESDAY</h4>
+					<h4>THURSDAY</h4>
+					<h4>FRIDAY</h4>
+					<h4>SATURDAY</h4>
+					<h4>SUNDAY</h4>
+
 				</div>
 				<div class="col-sm-4">
 					<h4>DIET</h4>
@@ -628,7 +629,10 @@
 
 
 	function openPlan(){
-			return document.getElementById('planContent').style.display = 'block';
+			document.getElementById('planContent').style.display = 'block';
+			document.getElementById('tag').style.display = 'none';
+			document.getElementById('details').style.display = 'none';
+
 	}
 
 </script>
