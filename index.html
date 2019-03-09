@@ -55,13 +55,12 @@
 		background-color: #f6f6f6;
 	}
 
-	.container-fluid {
-		padding: 60px 50px;
+	.bg-blue{
+		background-color: #42a3f7;
 	}
 
-	.logo-small {
-		color: #42a3f7;
-		font-size: 50px;
+	.container-fluid {
+		padding: 60px 50px;
 	}
 
 	.logo {
@@ -373,8 +372,19 @@
 		<br>
 
 		<a href="javascript:;" onClick="openPlan()">Generate Your Plan</a>
-		<div id="planContent" style="display:none;">
-			<p>PLAN WILL GO HERE</p>
+		<div id="planContent" style="display:none;" class="bg-blue">
+			<div class="row">
+				<div class="col-sm-4">
+					<h4>DAY</h4>
+				</div>
+				<div class="col-sm-4">
+					<h4>DIET</h4>
+				</div>
+				<div class="col-sm-4">
+					<h4>TRAINING</h4>
+				</div>
+			</div>
+			<a href="#pricing">Unlock More</a>
 		</div>
 	</div>
 
