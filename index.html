@@ -266,19 +266,21 @@
 
 	<div id="plan" class="container-fluid text-center">
 		<h2>PLAN</h2>
-		<h4>Fill in your details to generate a bespoke fitness place</h4>
+		<div id="planText">
+			<h4>Fill in your details to generate a bespoke fitness place</h4>
+		</div>
 		<div id="details" class="row">
 			<div class="col-sm-4">
 				<h4>CURRENT</h4>
 				<p>Fill in details about you and your current body</p>
 				<div class="row">
-					<h5> Date of Birth:  <input type="date" name="dob"></h5>
+					<h5> Date of Birth:  <input id="date" type="date" name="dob"></h5>
 				</div>
 				<div class="row">
-					<h5> Height: &ensp; ft:<input type="number" name="heightft" min="1" max="7"> in:<input type="number" name="heightin" min="0" max="11"> </h5>
+					<h5> Height: &ensp; ft:<input id="heightft" type="number" name="heightft" min="1" max="7"> in:<input id="heightin" type="number" name="heightin" min="0" max="11"> </h5>
 				</div>
 				<div class="row">
-					<h5> Weight:  &ensp; kg:<input type="number" name="weight"></h5>
+					<h5> Weight:  &ensp; kg:<input id="weight" type="number" name="weight"></h5>
 				</div>
 				<div class="row">
 					<h5> Body Type:
@@ -353,10 +355,10 @@
 				<div class="row">
 					<h5> Goal Strength:
 						<select id = "goalStrength">
-							<option value = "1">Poor</option>
-							<option value = "2">Average</option>
-							<option value = "3">Good</option>
-							<option value = "4">Very Good</option>
+							<option value = "1">Average</option>
+							<option value = "2">Good</option>
+							<option value = "3">Very Good</option>
+							<option value = "4">Elite</option>
 						</select>
 					</h5>
 				</div>
@@ -366,6 +368,8 @@
 
 		<a id="tag" href="javascript:;" onClick="openPlan()">Generate Your Plan</a>
 		<div id="planContent" style="display:none;">
+			<h4>This is your bespoke fitness place</h4>
+			<p id="test">Hello</p>
 			<table class="table text-left">
 				<thead>
 				<tr>
@@ -382,19 +386,19 @@
 							<tbody>
 							<tr>
 								<td width="10%">MEAL 1</td>
-								<td>3 large scrambled eggs & porridge</td>
+								<td id="meal11">3 large scrambled eggs & porridge</td>
 							</tr>
 							<tr>
 								<td>MEAL 2</td>
-								<td>protein shake & 2 bananas</td>
+								<td id="meal12">protein shake & 2 bananas</td>
 							</tr>
 							<tr>
 								<td>MEAL 3</td>
-								<td>burrito bowl</td>
+								<td id="meal13">burrito bowl</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
-								<td>chicken, rice & broccoli</td>
+								<td id="meal14">chicken, rice & broccoli</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
@@ -413,12 +417,18 @@
 								<td>Wide-Grip Standing Barbell Curl</td>
 							</tr>
 							<tr>
-								<td>Chest</td>
-								<td>Flat Bench Dumbbell Press</td>
-								<td>Incline Bench Dumbbell Press</td>
-								<td>Pec-Deck Machine</td>
+								<td>Shoulders</td>
+								<td>Overhead Press</td>
+								<td>Front Raise</td>
+								<td>Lateral Raise</td>
 							</tr>
-
+							<div id="cardio" style="display:none;"></div>
+							<tr>
+								<td>Cardio</td>
+								<td>30 minutes on treadmill</td>
+								<td>10 minutes on row</td>
+							</tr>
+							</div>
 							</tbody>
 						</table>
 					</td>
@@ -430,19 +440,19 @@
 							<tbody>
 							<tr>
 								<td width="10%">MEAL 1</td>
-								<td>3 large scrambled eggs & porridge</td>
+								<td id="meal21">3 large scrambled eggs & porridge</td>
 							</tr>
 							<tr>
 								<td>MEAL 2</td>
-								<td>protein shake & 2 bananas</td>
+								<td id="meal22">protein shake & 2 bananas</td>
 							</tr>
 							<tr>
 								<td>MEAL 3</td>
-								<td>burrito bowl</td>
+								<td id="meal23">burrito bowl</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
-								<td>chicken, rice & broccoli</td>
+								<td id="meal24">chicken, rice & broccoli</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
@@ -451,8 +461,21 @@
 							</tbody>
 						</table>
 					</td>
-					<td>REST DAY</td>
-				</tr>
+					<td>
+						<table class="table">
+							<tbody>
+							<div id="cardio" style="display:none;"></div>
+							<tr>
+								<td>Cardio</td>
+								<td>30 minutes on treadmill</td>
+								<td>10 minutes on row</td>
+							</tr>
+							</div>
+							</tbody>
+						</table>
+
+					</td>
+					</tr>
 				<tr>
 					<td>WEDNESDAY</td>
 					<td>
@@ -460,19 +483,19 @@
 							<tbody>
 							<tr>
 								<td width="10%">MEAL 1</td>
-								<td>3 large scrambled eggs & porridge</td>
+								<td id="meal31">3 large scrambled eggs & porridge</td>
 							</tr>
 							<tr>
 								<td>MEAL 2</td>
-								<td>protein shake & 2 bananas</td>
+								<td id="meal32">protein shake & 2 bananas</td>
 							</tr>
 							<tr>
 								<td>MEAL 3</td>
-								<td>burrito bowl</td>
+								<td id="meal33">burrito bowl</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
-								<td>chicken, rice & broccoli</td>
+								<td id="meal34">chicken, rice & broccoli</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
@@ -485,16 +508,23 @@
 						<table class="table">
 							<tbody>
 							<tr>
-								<td width="10%">Biceps</td>
-								<td>Standing Hammer Curl</td>
-								<td>Incline Inner-Biceps Curl</td>
-								<td>Wide-Grip Standing Barbell Curl</td>
-							</tr>
-							<tr>
-								<td>Chest</td>
+								<td width="10%">Chest</td>
 								<td>Flat Bench Dumbbell Press</td>
 								<td>Incline Bench Dumbbell Press</td>
 								<td>Pec-Deck Machine</td>
+							</tr>
+							<tr>
+								<td>Tricep</td>
+								<td>Cable Overhead Extension With Rope</td>
+								<td>Cable Push-Down</td>
+								<td>Parallel-Bar Dip</td>
+							</tr>
+							<tr>
+								<td>Back</td>
+								<td>Deadlift</td>
+								<td>Barbell Row</td>
+								<td>Lateral Pull Down</td>
+								<td>Seated Row</td>
 							</tr>
 
 							</tbody>
@@ -508,19 +538,19 @@
 							<tbody>
 							<tr>
 								<td width="10%">MEAL 1</td>
-								<td>3 large scrambled eggs & porridge</td>
+								<td id="meal41">3 large scrambled eggs & porridge</td>
 							</tr>
 							<tr>
 								<td>MEAL 2</td>
-								<td>protein shake & 2 bananas</td>
+								<td id="meal42">protein shake & 2 bananas</td>
 							</tr>
 							<tr>
 								<td>MEAL 3</td>
-								<td>burrito bowl</td>
+								<td id="meal43">burrito bowl</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
-								<td>chicken, rice & broccoli</td>
+								<td id="meal44">chicken, rice & broccoli</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
@@ -538,19 +568,19 @@
 							<tbody>
 							<tr>
 								<td width="10%">MEAL 1</td>
-								<td>3 large scrambled eggs & porridge</td>
+								<td id="meal51">3 large scrambled eggs & porridge</td>
 							</tr>
 							<tr>
 								<td>MEAL 2</td>
-								<td>protein shake & 2 bananas</td>
+								<td id="meal52">protein shake & 2 bananas</td>
 							</tr>
 							<tr>
 								<td>MEAL 3</td>
-								<td>burrito bowl</td>
+								<td id="meal53">burrito bowl</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
-								<td>chicken, rice & broccoli</td>
+								<td id="meal54">chicken, rice & broccoli</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
@@ -569,12 +599,17 @@
 								<td>Wide-Grip Standing Barbell Curl</td>
 							</tr>
 							<tr>
-								<td>Chest</td>
-								<td>Flat Bench Dumbbell Press</td>
-								<td>Incline Bench Dumbbell Press</td>
-								<td>Pec-Deck Machine</td>
+								<td>Shoulders</td>
+								<td>Overhead Press</td>
+								<td>Front Raise</td>
+								<td>Lateral Raise</td>
 							</tr>
-
+							<tr>
+								<td>Legs</td>
+								<td>Squat</td>
+								<td>Leg Press</td>
+								<td>Leg Extensions</td>
+							</tr>
 							</tbody>
 						</table>
 					</td>
@@ -586,19 +621,19 @@
 							<tbody>
 							<tr>
 								<td width="10%">MEAL 1</td>
-								<td>3 large scrambled eggs & porridge</td>
+								<td id="meal61">3 large scrambled eggs & porridge</td>
 							</tr>
 							<tr>
 								<td>MEAL 2</td>
-								<td>protein shake & 2 bananas</td>
+								<td id="meal62">protein shake & 2 bananas</td>
 							</tr>
 							<tr>
 								<td>MEAL 3</td>
-								<td>burrito bowl</td>
+								<td id="meal63">burrito bowl</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
-								<td>chicken, rice & broccoli</td>
+								<td id="meal64">chicken, rice & broccoli</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
@@ -611,16 +646,16 @@
 						<table class="table">
 							<tbody>
 							<tr>
-								<td width="10%">Biceps</td>
-								<td>Standing Hammer Curl</td>
-								<td>Incline Inner-Biceps Curl</td>
-								<td>Wide-Grip Standing Barbell Curl</td>
-							</tr>
-							<tr>
-								<td>Chest</td>
+								<td width="10%">Chest</td>
 								<td>Flat Bench Dumbbell Press</td>
 								<td>Incline Bench Dumbbell Press</td>
 								<td>Pec-Deck Machine</td>
+							</tr>
+							<tr>
+								<td>Tricep</td>
+								<td>Cable Overhead Extension With Rope</td>
+								<td>Cable Push-Down</td>
+								<td>Parallel-Bar Dip</td>
 							</tr>
 
 							</tbody>
@@ -634,19 +669,19 @@
 							<tbody>
 							<tr>
 								<td width="10%">MEAL 1</td>
-								<td>3 large scrambled eggs & porridge</td>
+								<td id="meal71">3 large scrambled eggs & porridge</td>
 							</tr>
 							<tr>
 								<td>MEAL 2</td>
-								<td>protein shake & 2 bananas</td>
+								<td id="meal72">protein shake & 2 bananas</td>
 							</tr>
 							<tr>
 								<td>MEAL 3</td>
-								<td>burrito bowl</td>
+								<td id="meal73">burrito bowl</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
-								<td>chicken, rice & broccoli</td>
+								<td id="meal74">chicken, rice & broccoli</td>
 							</tr>
 							<tr>
 								<td>MEAL 4</td>
@@ -903,10 +938,51 @@
 
 
 	function openPlan(){
-			document.getElementById('planContent').style.display = 'block';
-			document.getElementById('tag').style.display = 'none';
-			document.getElementById('details').style.display = 'none';
+		document.getElementById('planContent').style.display = 'block';
+		document.getElementById('tag').style.display = 'none';
+		document.getElementById('details').style.display = 'none';
+		document.getElementById('planText').style.display = 'none';
 
+		mheight = ((document.getElementById('heightft').value)/3.2808) +  ((document.getElementById('heightin').value)* 0.0254);
+		bmi = (document.getElementById('weight').value)/(mheight * mheight );
+
+		if(bmi>25){
+			document.getElementById('meal11').innerText = "Yoghurt";
+			document.getElementById('meal12').innerText = "Granola Bar";
+			document.getElementById('meal13').innerText = "Chicken Salad";
+			document.getElementById('meal14').innerText = "Fruit";
+			document.getElementById('meal21').innerText = "Yoghurt";
+			document.getElementById('meal22').innerText = "Granola Bar";
+			document.getElementById('meal23').innerText = "Chicken Salad";
+			document.getElementById('meal24').innerText = "Fruit";
+			document.getElementById('meal31').innerText = "Yoghurt";
+			document.getElementById('meal32').innerText = "Granola Bar";
+			document.getElementById('meal33').innerText = "Chicken Salad";
+			document.getElementById('meal34').innerText = "Fruit";
+			document.getElementById('meal41').innerText = "Yoghurt";
+			document.getElementById('meal42').innerText = "Granola Bar";
+			document.getElementById('meal43').innerText = "Chicken Salad";
+			document.getElementById('meal44').innerText = "Fruit";
+			document.getElementById('meal51').innerText = "Yoghurt";
+			document.getElementById('meal52').innerText = "Granola Bar";
+			document.getElementById('meal53').innerText = "Chicken Salad";
+			document.getElementById('meal54').innerText = "Fruit";
+			document.getElementById('meal61').innerText = "Yoghurt";
+			document.getElementById('meal62').innerText = "Granola Bar";
+			document.getElementById('meal63').innerText = "Chicken Salad";
+			document.getElementById('meal64').innerText = "Fruit";
+			document.getElementById('meal71').innerText = "Yoghurt";
+			document.getElementById('meal72').innerText = "Granola Bar";
+			document.getElementById('meal73').innerText = "Chicken Salad";
+			document.getElementById('meal74').innerText = "Fruit";
+			document.getElementById('cardio').style.display = 'block';
+
+
+
+
+		}
+
+		// document.getElementById("").innerHTML =
 	}
 
 </script>
